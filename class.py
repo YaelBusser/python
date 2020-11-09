@@ -12,8 +12,10 @@ class Carre:
         self.perimetre = self.fctPerimetre() 
         self.aire = self.unCote * self.unCote
     def fctPerimetre(self):                  
-        return self.unCote * 4                 
+        return self.unCote * 4    
+    def fctFactor(self):
+                     
 
 if __name__ == '__main__' :
     a = Carre(10)
-    print(a.aire)
+    print("Le carré à un côté d'une longueur de " + str(a.unCote) + ", une aire de " + str(a.aire) + " et un périmètre de " + str(a.perimetre) + ".")
