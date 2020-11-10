@@ -1,11 +1,24 @@
 class Fournisseur:
-    def __init__(self, lieu, voitureFournisseur):
-        self.adresse = lieu
+    def __init__(self, pays, voitureFournisseur):
+        self.adresse = pays
         self.voiture = voitureFournisseur
-
+fournisseur = Fournisseur("Tous les pays", [
+                ["Porsche", "911"], 
+                ["Mercedes Benz", "Classe A Berline"], 
+                ["Porsche", "911"], 
+                ["Mercedes Benz", "Classe A Berline"],
+                ["Maserati", "Levante"], 
+                ["Ferrari", "488"], 
+                ["Lamborghini", "Huracan"],
+                ["Aston Martin", "DB11"], 
+                ["Bentley", "Continental GT"], 
+                ["Lotus Cars", "Exige"], 
+                ["Rolls-Royce Motor Cars", "Dawn"],
+                ["Bugatti", "Veyron"]
+                ])
+fournisseur1 = Fournisseur("Allemagne", [["Porsche", "911"], ["Mercedes Benz", "Classe A Berline"]])
+fournisseur2 = Fournisseur("Italie", [["Maserati", "Levante"], ["Ferrari", "488"], ["Lamborghini", "Huracan"]])
+fournisseur3 = Fournisseur("Royaume-Uni", [["Aston Martin", "DB11"], ["Bentley", "Continental GT"], ["Lotus Cars", "Exige"], ["Rolls-Royce Motor Cars", "Dawn"]])
+fournisseur4 = Fournisseur("France", [["Bugatti", "Veyron"]])
 if __name__ == "__main__":
-    fournisseur1 = Fournisseur("Etats-Unis", [["Porsche", "Porsche 911"], ["Mercedes Benz", "Classe A Berline"]])
-    fournisseur2 = Fournisseur("Italie", [["Maserati", ""], ["Ferrari", ""], ["Lamborghini", ""]])
-    fournisseur3 = Fournisseur("Royaume-Uni", [["Aston Martin", ""], ["Bentley", ""], ["Lotus Cars", "Lotus Exige"], ["Rolls-Royce Motor Cars", ""]])
-    fournisseur4 = Fournisseur("France", [["Bugatti", ""]])
-    print(fournisseur4.voiture)
+    print()
