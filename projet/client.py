@@ -33,7 +33,7 @@ if __name__ == "__main__":
         for k in range(len(concessionnaire.concessionnaire.voitureDisponible)):
             if(concessionnaire.concessionnaire.voitureDisponible[k][0] == marque):
                 print(concessionnaire.concessionnaire.voitureDisponible[k][1]) 
-               
+                #Ici je pouvais continuer en faisant appelle à ma class Voiture pour spécifier les caractéristiques de la voiture que le client voudrait.
 
     else:
         print("Désolé nous n'avons pas de modèles "+ str(marque) +" mais nous avons ceux-ci si vous voulez : ")
