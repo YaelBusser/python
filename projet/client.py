@@ -33,6 +33,7 @@ if __name__ == "__main__":
         for k in range(len(concessionnaire.concessionnaire.voitureDisponible)):
             if(concessionnaire.concessionnaire.voitureDisponible[k][0] == marque):
                 print(concessionnaire.concessionnaire.voitureDisponible[k][1]) 
+                print(voiture.voiture.prixVoiture)
 
     else:
         print("Désolé nous n'avons pas de modèles "+ str(marque) +" mais nous avons ceux-ci si vous voulez : ")
