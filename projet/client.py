@@ -29,9 +29,24 @@ if __name__ == "__main__":
             tabOk.append("faux")
     if "ok" in tabOk:    
         print("Nous avons en effet des "+ str(marque) +" disponibles. ")
+        print("Nous avons ces modèles-ci : ")
+        for k in range(len(concessionnaire.concessionnaire.voitureDisponible)):
+            if(concessionnaire.concessionnaire.voitureDisponible[k][0] == marque):
+                print(concessionnaire.concessionnaire.voitureDisponible[k][1]) 
 
     else:
         print("Désolé nous n'avons pas de modèles "+ str(marque) +" mais nous avons ceux-ci si vous voulez : ")
         for j in range(len(concessionnaire.concessionnaire.voitureDisponible)):
             print(concessionnaire.concessionnaire.voitureDisponible[j][0])
-        marque = input("Quelle marque de voiture avez-vous choisi ?")
+        marque = input("Quelle marque de voiture avez-vous choisi ? ")
+        for l in range(len(concessionnaire.concessionnaire.voitureDisponible)):
+            if marque in concessionnaire.concessionnaire.voitureDisponible[l]:
+                tabOk.append("ok")
+            else:
+                tabOk.append("faux")
+        if "ok" in tabOk:    
+            print("Nous avons en effet des "+ str(marque) +" disponibles. ")
+            print("Nous avons ces modèles-ci : ")
+            for k in range(len(concessionnaire.concessionnaire.voitureDisponible)):
+                if(concessionnaire.concessionnaire.voitureDisponible[k][0] == marque):
+                    print(concessionnaire.concessionnaire.voitureDisponible[k][1]) 
