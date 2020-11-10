@@ -1,14 +1,7 @@
-class Client: 
-    def __init__(self, identifiant, nom, prenom, voiture):
-        self.idClient = identifiant
-        self.nomClient = nom
-        self.prenomClient = prenom
-        self.voitureClient = voiture
-
 class Voiture:
     identifiantVoiture = 0
     def __init__(self, nom, prix, marque, couleur, portes, roues, places, manuelle, auto):
-        self.idVoiture = type(self).identifiantVoiture
+        self.idVoiture = type(self).identifiantVoiture #ou Voiture.identificationVoiture
         type(self).identifiantVoiture += 1
         self.nomVoiture = nom
         self.prixVoiture = prix
