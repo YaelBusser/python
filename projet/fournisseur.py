@@ -1,26 +1,11 @@
 class Fournisseur:
-    tabVoiture = [
-        ["Porsche", 
-            "Porsche 911"], 
-        ["Mercedes Benz", 
-            "Classe A Berline"], 
-        ["Lotus Cars", 
-            "Lotus Exige"], 
-        ["Maserati"], 
-        ["Aston Martin"], 
-        ["Bentley"], 
-        ["Bugatti"], 
-        ["Ferrari"], 
-        ["Lamborghini"], 
-        ["Rolls-Royce Motor Cars"]]
     def __init__(self, lieu, voitureFournisseur):
         self.adresse = lieu
         self.voiture = voitureFournisseur
 
 if __name__ == "__main__":
-    fournisseur1 = Fournisseur("San Francisco", [["Porsche", "Porsche 911"], ["Mercedes Benz", "Classe A Berline"]])
-    fournisseur2 = Fournisseur("", [["", ""], ["", ""]])
-    fournisseur3 = Fournisseur("", [["", ""], ["", ""]])
-    fournisseur4 = Fournisseur("", [["", ""], ["", ""]])
-    fournisseur5 = Fournisseur("", [["", ""], ["", ""]])
-    print(fournisseur1.voiture)
+    fournisseur1 = Fournisseur("Etats-Unis", [["Porsche", "Porsche 911"], ["Mercedes Benz", "Classe A Berline"]])
+    fournisseur2 = Fournisseur("Italie", [["Maserati", ""], ["Ferrari", ""], ["Lamborghini", ""]])
+    fournisseur3 = Fournisseur("Royaume-Uni", [["Aston Martin", ""], ["Bentley", ""], ["Lotus Cars", "Lotus Exige"], ["Rolls-Royce Motor Cars", ""]])
+    fournisseur4 = Fournisseur("France", [["Bugatti", ""]])
+    print(fournisseur4.voiture)

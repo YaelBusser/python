@@ -5,6 +5,6 @@ class concessionnaire:
         self.nombreVoiture = nbVoiture
         self.marques = voitureMarque
         self.voitureDispo = voitureDisponible
-
+    
 if __name__ == "__main__":
 
