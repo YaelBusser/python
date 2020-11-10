@@ -1,8 +1,8 @@
-# tab = []
-# for i in range(0, 10):
-#     for j in range(0, 10):
-#         tab.append([i, j])
-# print(tab)
+tab = []
+for i in range(0, 10):
+    for j in range(0, 10):
+        tab.append([i, j])
+print(tab)
 
 # phrase = "Ecrire une phrase"
 # nbMots = 1
