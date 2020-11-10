@@ -1,18 +1,37 @@
 import voiture
+import employes
+import concessionnaire
 class Client: 
-    def __init__(self, nom, prenom, idVoiture):
-        self.nomClient = nom
-        self.prenomClient = prenom
-        self.idVoitureClient = idVoiture
+    def __init__(self, prenomClient, nomClient):
+        self.prenom = prenomClient
+        self.nom = nomClient
 
 if __name__ == "__main__":
-    voiture1 = voiture.Voiture("Shelby GT 500 Eleanor 1967", 100000, "Ford Mustang", "Noir", 3, 2, True, False)
-    client1 = Client("Busser", "Yaël", voiture1.idVoiture)
+    client = Client(input("Quel est votre prénom ? "), input("Quel est votre nom de famille ? "))
+    vendeur = input("Quel vendeur voulez-vous avoir pour vous aider à choisir votre voiture de luxe ? ("
+    + str(employes.employe4.prenom) +", "+ str(employes.employe5.prenom) +" ou "+ str(employes.employe6.prenom) +") ")
+    if vendeur == str(employes.employe4.prenom):
+        print("Bonjour "+ client.prenom +", je m'appelle "+ str(employes.employe4.prenom) +", je serais votre conseiller pour vous permettre de choisir la voiture de vos rêves !")
+        marque = input("Pour commencer quelle marque de voiture vous ferais plaisir ? ")
 
-    voiture2 = voiture.Voiture("Bugatti Veyron", 1000000, "Bugatti", "Noir", 3, 2, True, False)
-    client2 = Client("Nicola", "Civile", voiture2.idVoiture)
-    
-    print(client1.idVoitureClient)
-    print(voiture1.idVoiture)
-    print(client2.idVoitureClient)
-    print(voiture2.idVoiture)
+    elif vendeur == str(employes.employe5.prenom):
+        print("Bonjour "+ client.prenom +", je m'appelle "+ str(employes.employe5.prenom) +", je serais votre conseiller pour vous permettre de choisir la voiture de vos rêves !")
+        marque = input("Pour commencer quelle marque de voiture vous ferais plaisir ? ")
+
+    elif vendeur == str(employes.employe6.prenom):
+        print("Bonjour "+ client.prenom +", je m'appelle "+ str(employes.employe6.prenom) +", je serais votre conseiller pour vous permettre de choisir la voiture de vos rêves !")
+        marque = input("Pour commencer quelle marque de voiture vous ferais plaisir ? ")
+    tabOk = []
+    for i in range(len(concessionnaire.concessionnaire.voitureDisponible)):
+        if marque in concessionnaire.concessionnaire.voitureDisponible[i]:
+            tabOk.append("ok")
+        else:
+            tabOk.append("faux")
+    if "ok" in tabOk:    
+        print("Nous avons en effet des "+ str(marque) +" disponibles. ")
+
+    else:
+        print("Désolé nous n'avons pas de modèles "+ str(marque) +" mais nous avons ceux-ci si vous voulez : ")
+        for j in range(len(concessionnaire.concessionnaire.voitureDisponible)):
+            print(concessionnaire.concessionnaire.voitureDisponible[j][0])
+        marque = input("Quelle marque de voiture avez-vous choisi ?")

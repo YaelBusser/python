@@ -4,8 +4,6 @@ class Fournisseur:
         self.voiture = voitureFournisseur
 fournisseur = Fournisseur("Tous les pays", [
                 ["Porsche", "911"], 
-                ["Mercedes Benz", "Classe A Berline"], 
-                ["Porsche", "911"], 
                 ["Mercedes Benz", "Classe A Berline"],
                 ["Maserati", "Levante"], 
                 ["Ferrari", "488"], 
